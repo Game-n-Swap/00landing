@@ -1,0 +1,24 @@
+.cd-hero__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+  }
+  
+  .cd-hero__slide.cd-hero__slide--selected {
+    /* this is the visible slide */
+    transform: translateX(0);
+  }
+  
+  .cd-hero__slide.cd-hero__slide--move-left {
+    /* slide hidden on the left */
+    transform: translateX(-100%);
+  }
+  
+  .cd-hero__slide.cd-hero__slide--is-moving, 
+  .cd-hero__slide.cd-hero__slide--selected {
+    /* the cd-hero__slide--is-moving class is assigned to the slide which is moving outside the viewport */
+    transition: transform 0.5s;
+  }
